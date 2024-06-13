@@ -153,10 +153,16 @@ df_sum_player.show(truncate=False)
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/8c0c1dc2-f99f-4f22-859e-22f2f6f24c27" alt="img9">
 </p>
+<p>Agora, vou fazer o mesmo somando os pontos das equipes para verificar a equipe que mais tem ponto somado.</p>
 
-
-
-
+```python
+df_sum_team = df_team_filter.groupBy('team').agg(sum('pts_team')).orderBy(col('sum(pts_team)').desc())
+df_sum_team.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/0a0cf6f2-19fe-491e-900f-bf118c85cd0c" alt="img10">
+</p>
+<p>Nessa execução, é mostrado que o jogador LeBron James tem um total de 46,727 pontos, e o time que tem mais pontos somados é o LAL (Los Angeles Lakers) com um total de 240,421 pontos.</p>
 
 
 
