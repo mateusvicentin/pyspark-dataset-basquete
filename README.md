@@ -1,3 +1,7 @@
+# Índice 
+* [NBA 1997-2023](#NBA-1997-2023)
+* [Jogos Internacionais de Futebol 1872-2024](#Jogos-Internacionais-de-Futebol-1872-2024)
+
 <h1 align="center">PySpark com Dataset da NBA 1997-2023 e Jogos Internacionais de Futebol 1872-2024</h1>
 <h1>NBA 1997-2023</h1>
 <p>Neste projeto, utilizarei um dataset fornecido pelo site da Kaggle, que contém informações sobre times e jogadores da NBA, abrangendo jogos de 1997 até 2023.</p>
@@ -270,6 +274,7 @@ df_total_gols.agg(sum('count')).alias('qtd_gols').show(truncate=False)
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/11018ab5-f7e1-48f3-bc01-90a8e6546278" alt="img18">
 </p>
+<p>Encerro aqui esse projeto utilizando o PySpark do Spark para algumas consultas de Datasets, não foi feito nenhum tipo de tratamento apenas realização de filtros para consulta dos dados informados.</p>
 
 
 
