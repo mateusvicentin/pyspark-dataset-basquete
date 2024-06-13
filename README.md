@@ -206,3 +206,22 @@ df.show()
 </p>
 <p>Nesse dataframe, da mesma forma que foi feito no da NBA, irei criar duas colunas chamadas <em>month</em> (mês) e <em>year</em> (ano).</p>
 
+```python
+df = df.withColumn('month', month(df['date']))
+df = df.withColumn('year', year(df['date']))
+df.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/b8d34956-c5f9-4677-92e9-f0225e3fc8a0" alt="img12">
+</p>
+<p>Vou fazer a contagem dos jogadores que mais marcaram gols.</p>
+
+```python
+df_player_most_goals = df.groupBy('scorer').count().orderBy(col('count').desc())
+df_player_most_goals.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/388abdb4-a1ca-4298-877c-bd4b50576084" alt="img13">
+</p>
+
+
