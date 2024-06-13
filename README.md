@@ -242,6 +242,36 @@ df_brazil.show(truncate=False)
   <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/cd6dcf5a-8220-4ab7-86bd-bde89591c518" alt="img15">
 </p>
 
+<p>Vou aproveitar e filtrar a quantidade de gols que um jogador fez pela seleção brasileira em determinado ano.</p>
+
+```python
+df_brazil = df.filter(df.team.isin('Brazil')).groupBy('year','scorer').count().orderBy(col('count').desc())
+df_brazil.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/250c15e4-4077-4025-a32d-2ca83916c6e0" alt="img16">
+</p>
+
+<p>Vou realizar uma consulta para verificar quantos gols no total foram feitos de pênalti e quantos não foram.</p>
+
+```python
+df_penalti = df.groupBy('penalty').count().orderBy(col('count').desc())
+df_penalti.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/f4daed15-d029-4ae3-b28b-296d6ac9e4f2" alt="img17">
+</p>
+<p>Somando a quantidade total de gols feitos pelas seleções.</p>
+
+```python
+df_total_gols = df.groupBy('scorer').count()
+df_total_gols.agg(sum('count')).alias('qtd_gols').show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/11018ab5-f7e1-48f3-bc01-90a8e6546278" alt="img18">
+</p>
+
+
 
 
 
