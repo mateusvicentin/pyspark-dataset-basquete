@@ -103,4 +103,22 @@ df_player_filter.show(truncate=False)
 <p>Podemos observar que ele está fornecendo muito menos informações, e podemos verificar que as colunas 'month' e 'year' estão em conformidade com as informações mostradas na coluna 'date'.</p>
 <p>Vamos fazer o mesmo para o DataFrame <code>df_team</code>. Desta vez, iremos selecionar apenas as colunas 'gameid', 'date', 'team', 'away' e 'PTS'. Assim como foi feito para o <code>df_player</code>, vamos renomear 'PTS' para 'pts_team' e criar as colunas 'month' (mês) e 'year' (ano) para o DataFrame <code>df_team</code>.</p>
 
+```python
+df_team_filter = df_team.select('gameid', 'date', 'team', 'away',  'PTS')
+df_team_filter = df_team_filter.withColumn('pts_team', df_team_filter['PTS']).drop('PTS')
+df_team_filter = df_team_filter.withColumn('month', month(df_team_filter['date']))
+df_team_filter = df_team_filter.withColumn('year', year(df_team_filter['date']))
+df_team_filter.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/21e7cd11-9e94-4766-8ee6-affbbfe503c1" alt="img5">
+</p>
+
+<h2>Realizando Consultas</h2>
+
+
+
+
+
+
 
