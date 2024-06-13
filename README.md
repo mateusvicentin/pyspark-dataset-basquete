@@ -54,4 +54,4 @@ df_team = spark.read.csv("C:\\Users\\Vicentin\\Documents\\Estudos\\Dados\\CSV\\t
 <p>É utilizado o parâmetro <code>sep=','</code> em ambos Dataframes porque, no arquivo CSV, a vírgula é o separador das informações. Dessa forma, o Spark consegue ler o arquivo corretamente sem se confundir ou ter problemas para retornar as informações.</p>
 
 <h2>Verificando os Esquemas dos DataFrames</h2>
-<p>Para este procedimento, é utilizado o comando <code>&lt;nomedodataf&gt;.printSchema()</code>. No caso, será utilizado <code>df_player.printSchema()</code> e <code>df_team.printSchema()</code>, pois os DataFrames <code>df_player</code> e <code>df_team</code> foram criados anteriormente.</p>
+<p>Para este procedimento, é utilizado o comando <code>&lt;nomedodataframe&gt;.printSchema()</code>. No caso, será utilizado <code>df_player.printSchema()</code> e <code>df_team.printSchema()</code>, pois os DataFrames <code>df_player</code> e <code>df_team</code> foram criados anteriormente.</p>
