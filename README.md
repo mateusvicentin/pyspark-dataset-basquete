@@ -101,6 +101,6 @@ df_player_filter.show(truncate=False)
 </p>
 
 <p>Podemos observar que ele está fornecendo muito menos informações, e podemos verificar que as colunas 'month' e 'year' estão em conformidade com as informações mostradas na coluna 'date'.</p>
-
+<p>Vamos fazer o mesmo para o DataFrame <code>df_team</code>. Desta vez, iremos selecionar apenas as colunas 'gameid', 'date', 'team', 'away' e 'PTS'. Assim como foi feito para o <code>df_player</code>, vamos renomear 'PTS' para 'pts_team' e criar as colunas 'month' (mês) e 'year' (ano) para o DataFrame <code>df_team</code>.</p>
 
 
