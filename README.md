@@ -195,4 +195,14 @@ spark = SparkSession.builder\
         .appName('fotball')\
         .getOrCreate()
 ```
+<h4>goalscorers.csv</h4>
+
+```python
+df = spark.read.csv('C:\\Users\\Vicentin\\Documents\\Estudos\\Dados\\CSV\\goalscorers.csv', encoding='utf-8', header=True, inferSchema=True, sep=',')
+df.show()
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/c43a66e0-a775-4e9d-b24b-5b56c1595cdc" alt="img11">
+</p>
+<p>Nesse dataframe, da mesma forma que foi feito no da NBA, irei criar duas colunas chamadas <em>month</em> (mês) e <em>year</em> (ano).</p>
 
