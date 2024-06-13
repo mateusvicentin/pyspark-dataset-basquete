@@ -144,9 +144,15 @@ df_jogos_player.show(truncate=False)
   <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/5e049c2f-caee-4e39-a4b3-18151d7010f0" alt="img8">
 </p>
 
+<p>Agora, vou realizar a soma de todos os pontos de cada jogador.</p>
 
-
-
+```python
+df_sum_player = df_player_filter.groupBy('player').agg(sum('pts_player')).orderBy(col('sum(pts_player)').desc())
+df_sum_player.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/8c0c1dc2-f99f-4f22-859e-22f2f6f24c27" alt="img9">
+</p>
 
 
 
