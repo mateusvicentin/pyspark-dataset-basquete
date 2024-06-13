@@ -86,4 +86,21 @@ df_player.show(truncate=False)
 
 <p>Vou criar também mais 2 colunas. Será utilizado como base a coluna <code>date</code> para criar uma coluna com o mês (<code>month</code>) e outra com o ano (<code>year</code>), utilizando as informações presentes em <code>date</code>.</p>
 
+```python
+df_player = df_player.withColumn('pts_player', df_player['PTS']).drop('PTS')
+df_player = df_player.withColumn('minutes_played', df_player['MIN']).drop('MIN')
+df_player_filter = df_player.select('gameid', 'date', 'player', 'team', 'home', 'away', 
+                                    'minutes_played', 'pts_player')
+
+df_player_filter = df_player_filter.withColumn('month', month(df_player_filter['date']))
+df_player_filter = df_player_filter.withColumn('year', year(df_player_filter['date']))
+df_player_filter.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/ffd55efd-1ce7-4af6-82f9-09f11c08f492" alt="img4">
+</p>
+
+<p>Podemos observar que ele está fornecendo muito menos informações, e podemos verificar que as colunas 'month' e 'year' estão em conformidade com as informações mostradas na coluna 'date'.</p>
+
+
 
