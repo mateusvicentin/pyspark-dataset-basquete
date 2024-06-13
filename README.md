@@ -55,3 +55,12 @@ df_team = spark.read.csv("C:\\Users\\Vicentin\\Documents\\Estudos\\Dados\\CSV\\t
 
 <h2>Verificando os Esquemas dos DataFrames</h2>
 <p>Para este procedimento, é utilizado o comando <code>&lt;nomedodataframe&gt;.printSchema()</code>. No caso, será utilizado <code>df_player.printSchema()</code> e <code>df_team.printSchema()</code>, pois os DataFrames <code>df_player</code> e <code>df_team</code> foram criados anteriormente.</p>
+
+```python
+df_player.printSchema()
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/8b9adc2b-8f8a-4dfd-a2a6-8ae3ebef8aaa" alt="img1">
+</p>
+
+
