@@ -63,4 +63,8 @@ df_player.printSchema()
   <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/8b9adc2b-8f8a-4dfd-a2a6-8ae3ebef8aaa" alt="img1">
 </p>
 
+```python
+df_team.printSchema()
+```
+
 
