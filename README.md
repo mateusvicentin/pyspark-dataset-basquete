@@ -20,3 +20,7 @@
   <li><code>team_traditional.csv</code> - times</li>
   <li><code>traditional.csv</code> - jogadores</li>
 </ul>
+
+<h2>Carregando os Dados</h2>
+<p>Após baixar os arquivos, utilizarei o VS Code com o Spark para carregar as informações e começar a realizar os tratamentos e verificações dos dados.</p>
+
