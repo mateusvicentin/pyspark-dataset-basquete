@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/a25168fd-a6ba-4cea-b4dc-846544ca7e44" alt="img0">
+</p>
+
+
 <h1 align="center">PySpark com Dataset da NBA 1997-2023 e Jogos Internacionais de Futebol 1872-2024</h1>
 
 # Índice 
