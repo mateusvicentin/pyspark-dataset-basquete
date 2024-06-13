@@ -14,3 +14,9 @@
 <p>Os dados foram extraídos em janeiro de 2024.</p>
 <p>Os box scores de times para as temporadas de 1997, 1998, 1999, 2000, 2006 e 2010 foram compilados a partir dos box scores de jogadores devido a razões técnicas.</p>
 <p>***Informações retiradas do proprio Dataset***</p>
+
+<p>São dois datasets fornecidos:</p>
+<ul>
+  <li><code>team_traditional.csv</code> - times</li>
+  <li><code>traditional.csv</code> - jogadores</li>
+</ul>
