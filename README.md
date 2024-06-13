@@ -113,8 +113,30 @@ df_team_filter.show(truncate=False)
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/21e7cd11-9e94-4766-8ee6-affbbfe503c1" alt="img5">
 </p>
-
 <h2>Realizando Consultas</h2>
+<p>Vou realizar uma consulta para trazer de forma decrescente os pontos da equipe ('pts_team') do dataframe df_team.</p>
+
+```python
+df_desc_team = df_team_filter.orderBy(col('pts_team').desc())
+df_desc_team.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/0a18137d-b1b1-45e4-9424-a4ea89b030b7" alt="img6">
+</p>
+<p>Vou fazer o mesmo com o dataframe df_player.</p>
+
+```python
+df_desc_player = df_player_filter.orderBy(col('pts_player').desc())
+df_desc_player.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/b93025ed-c8c5-4fad-824f-8000c1aa6ba8" alt="img7">
+</p>
+<p>Segundo os dados do arquivo baixado, no DataFrame df_team, o time SAC (Sacramento Kings) fez um total de 176 pontos em uma partida realizada em 23/02/2023. No DataFrame df_player, o jogador Kobe Bryant fez 81 pontos em uma partida no dia 22/01/2006.</p>
+
+
+
+
 
 
 
