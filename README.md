@@ -1,4 +1,5 @@
-<h1 align="center">PySpark com Dataset da NBA 1997-2023</h1>
+<h1 align="center">PySpark com Dataset da NBA 1997-2023 e Jogos Internacionais de Futebol 1872-2024</h1>
+<h1>NBA 1997-2023</h1>
 <p>Neste projeto, utilizarei um dataset fornecido pelo site da Kaggle, que contém informações sobre times e jogadores da NBA, abrangendo jogos de 1997 até 2023.</p>
 <p>Link para o dataset: <a href="https://www.kaggle.com/datasets/szymonjwiak/nba-traditional">NBA Traditional Boxscores 1997-2023</a></p>
 <h2>Sobre o Dataset</h2>
@@ -164,5 +165,5 @@ df_sum_team.show(truncate=False)
 </p>
 <p>Nessa execução, é mostrado que o jogador LeBron James tem um total de 46,727 pontos, e o time que tem mais pontos somados é o LAL (Los Angeles Lakers) com um total de 240,421 pontos.</p>
 
-
+<h1>Jogos Internacionais de Futebol 1872-2024</h1>
 
