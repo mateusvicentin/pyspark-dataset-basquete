@@ -180,4 +180,19 @@ df_sum_team.show(truncate=False)
   <li><strong>penalty</strong>: se o gol foi marcado de pênalti</li>
 </ul>
 
+<h2>Carregando os Dados</h2>
+<p>Após baixar o arquivo, utilizarei o VS Code com o Spark para carregar as informações e começar a realizar os tratamentos e verificações dos dados.</p>
+
+```python
+import findspark
+from pyspark.sql.functions import count, col, sum,  year, month, max, avg
+findspark.init()
+```
+```python
+from pyspark.sql import SparkSession
+spark = SparkSession.builder\
+        .master('local')\
+        .appName('fotball')\
+        .getOrCreate()
+```
 
