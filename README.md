@@ -166,4 +166,18 @@ df_sum_team.show(truncate=False)
 <p>Nessa execução, é mostrado que o jogador LeBron James tem um total de 46,727 pontos, e o time que tem mais pontos somados é o LAL (Los Angeles Lakers) com um total de 240,421 pontos.</p>
 
 <h1>Jogos Internacionais de Futebol 1872-2024</h1>
+<p>Neste projeto, utilizarei um dataset fornecido pelo site da Kaggle, que contém informações resultados de jogos internacionais de futebol de 1872-2024.</p>
+<p>Link para o dataset: <a href="[https://www.kaggle.com/datasets/szymonjwiak/nba-traditional](https://www.kaggle.com/datasets/martj42/international-football-results-from-1872-to-2017)">International football results from 1872 to 2024</a></p>
+<h2>Sobre o Dataset</h2>
+<p>Foi utilizado o arquivo <em>goalscorers.csv</em> que inclui as seguintes colunas:</p>
+<ul>
+  <li><strong>date</strong>: data da partida</li>
+  <li><strong>home_team</strong>: nome do time da casa</li>
+  <li><strong>away_team</strong>: nome do time visitante</li>
+  <li><strong>team</strong>: nome do time que marcou o gol</li>
+  <li><strong>scorer</strong>: nome do jogador que marcou o gol</li>
+  <li><strong>own_goal</strong>: se o gol foi um gol contra</li>
+  <li><strong>penalty</strong>: se o gol foi marcado de pênalti</li>
+</ul>
+
 
