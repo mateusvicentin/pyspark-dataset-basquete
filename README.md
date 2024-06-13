@@ -24,3 +24,24 @@
 <h2>Carregando os Dados</h2>
 <p>Após baixar os arquivos, utilizarei o VS Code com o Spark para carregar as informações e começar a realizar os tratamentos e verificações dos dados.</p>
 
+```python
+import findspark
+from pyspark.sql.functions import count, col, asc, desc, sum, concat, to_date, year, month, max
+findspark.init()
+```
+```python
+from pyspark.sql import SparkSession
+spark = SparkSession.builder\
+        .master('local')\
+        .appName('nbastats')\
+        .getOrCreate()
+```
+<p>Após iniciar a sessão do Spark, farei a leitura dos arquivos. Para isso, criarei dois DataFrames: um chamado <code>df_player</code> e outro chamado <code>df_team</code>, cada um deles lendo o seu respectivo arquivo.</p>
+
+<h2>df_player</h2>
+
+```python
+df_player = spark.read.csv("C:\\Users\\Vicentin\\Documents\\Estudos\\Dados\\CSV\\traditional.csv", encoding='utf-8', header=True, inferSchema=True, sep=',')
+```
+<p>Para ler os arquivos, é necessário informar o caminho onde eles estão armazenados. Como os arquivos estão baixados na minha máquina, eu forneço o caminho do arquivo e informo o encoding <code>UTF-8</code>, caso haja algum caractere especial.</p>
+
