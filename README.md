@@ -78,6 +78,12 @@ df_team.printSchema()
 df_player.show(truncate=False)
 ```
 <p>É utilizado o parâmetro <code>truncate=False</code> para exibir os dados de forma que fiquem alinhados e completos, sem cortar as informações.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/8d0f67a2-134d-4291-adf4-542790673654" alt="img3">
+</p>
+<p>Nesse caso, quero selecionar apenas algumas colunas: gameid, date, player, team, home, away, MIN e PTS</p>
+<p>Irei alterar o nome de duas colunas; neste caso, MIN para minutes_played e PTS para pts_player.</p>
 
+<p>Vou criar também mais 2 colunas. Será utilizado como base a coluna <code>date</code> para criar uma coluna com o mês (<code>month</code>) e outra com o ano (<code>year</code>), utilizando as informações presentes em <code>date</code>.</p>
 
 
