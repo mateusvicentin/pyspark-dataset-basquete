@@ -38,17 +38,19 @@ spark = SparkSession.builder\
 ```
 <p>Após iniciar a sessão do Spark, farei a leitura dos arquivos. Para isso, criarei dois DataFrames: um chamado <code>df_player</code> e outro chamado <code>df_team</code>, cada um deles lendo o seu respectivo arquivo.</p>
 
-<h2>df_player</h2>
+<h4>df_player</h4>
 
 ```python
 df_player = spark.read.csv("C:\\Users\\Vicentin\\Documents\\Estudos\\Dados\\CSV\\traditional.csv", encoding='utf-8', header=True, inferSchema=True, sep=',')
 ```
 <p>Para ler os arquivos, é necessário informar o caminho onde eles estão armazenados. Como os arquivos estão baixados na minha máquina, eu forneço o caminho do arquivo e informo o encoding <code>UTF-8</code>, caso haja algum caractere especial.</p>
 
-<h2>df_team</h2>
+<h4>df_team</h4>
 
 ```python
 df_team = spark.read.csv("C:\\Users\\Vicentin\\Documents\\Estudos\\Dados\\CSV\\team_traditional.csv",encoding='utf-8', header=True, inferSchema=True, sep=',')
 ```
 <p>Para ler os arquivos, é necessário informar o caminho onde eles estão armazenados. Como os arquivos estão baixados na minha máquina, eu forneço o caminho do arquivo e informo o encoding <code>UTF-8</code>, caso haja algum caractere especial.</p>
 <p>É utilizado o parâmetro <code>sep=','</code> em ambos Dataframes porque, no arquivo CSV, a vírgula é o separador das informações. Dessa forma, o Spark consegue ler o arquivo corretamente sem se confundir ou ter problemas para retornar as informações.</p>
+
+<h2>Verificando os Esquemas dos Dataframes</h2>
