@@ -66,5 +66,10 @@ df_player.printSchema()
 ```python
 df_team.printSchema()
 ```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/c8ddd550-d4b7-492b-9a8f-baa7ec2351a9" alt="img2">
+</p>
+<p>Podemos verificar como as tabelas estão estruturadas, qual é o tipo de cada coluna, se é uma String, uma Data ou um número inteiro, por exemplo.</p>
+
 
 
