@@ -223,5 +223,26 @@ df_player_most_goals.show(truncate=False)
 <p align="center">
   <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/388abdb4-a1ca-4298-877c-bd4b50576084" alt="img13">
 </p>
+<p>Vou fazer a contagem das seleções que mais fizeram gols.</p>
+
+```python
+df_team_most_goals = df.groupBy('team').count().orderBy(col('count').desc())
+df_team_most_goals.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/ab62d3c2-f00f-4922-af59-d4094526d906" alt="img14">
+</p>
+<p>Agora vou filtrar quem fez mais gols pela seleção, no caso, quero puxar apenas da seleção brasileira. Para isso, vou usar o método .filter.</p>
+
+```python
+df_brazil = df.filter(df.team.isin('Brazil')).groupBy('scorer').count().orderBy(col('count').desc())
+df_brazil.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/pyspark-dataset-basquete/assets/31457038/cd6dcf5a-8220-4ab7-86bd-bde89591c518" alt="img15">
+</p>
+
+
+
 
 
