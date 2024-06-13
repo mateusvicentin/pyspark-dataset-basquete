@@ -71,5 +71,13 @@ df_team.printSchema()
 </p>
 <p>Podemos verificar como as tabelas estão estruturadas, qual é o tipo de cada coluna, se é uma String, uma Data ou um número inteiro, por exemplo.</p>
 
+<h2>Visualizando Tabela</h2>
+<p>Agora, vamos visualizar as informações que serão trazidas do dataframe. Vou utilizar o <code>df_player</code> como exemplo.</p>
+
+```python
+df_player.show(truncate=False)
+```
+<p>É utilizado o parâmetro <code>truncate=False</code> para exibir os dados de forma que fiquem alinhados e completos, sem cortar as informações.</p>
+
 
 
